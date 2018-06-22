@@ -1,0 +1,396 @@
+// @media screen and (max-width: $brk-xsm) {
+//
+// }
+$color-main: #969696;
+$color-sec: #5a8cf0;
+$color-light: #fff;
+
+textarea, select, input, button { outline: none; }
+
+
+
+body{
+  font-family: 'Barlow', Arial, sans-serif;
+  margin: 0;
+}
+*{
+  box-sizing: border-box;
+}
+
+img{
+  width: 100%;
+}
+
+.hero_section{
+  position: relative;
+  padding: 0;
+  color: $color-light;
+  a{
+    color: $color-light;
+  }
+}
+.logo h1{
+  font-size: 4em;
+  line-height: 1.3em;
+  margin: 0;
+  font-weight: 600;
+}
+
+.carousel{
+  overflow:  hidden;
+  width: 100%;
+  height: 100%;
+}
+.slick-carousel{
+  position: relative;
+  margin: 0;
+  .slick-dots{
+    bottom: 0;
+  }
+}
+
+.slick-dots{
+  padding-bottom: 20px;
+	li button{
+		display: none;
+	}
+	li{
+		font-size: 0.2rem;
+		margin: 10px;
+		// color: $color-main;
+		// padding: 2px;
+		width: 13px;
+		height: 13px;
+		border: 2px solid #c3c5c9;
+		border-radius: 50%;
+	}
+	.slick-active{
+		background-color: #c3c5c9;
+	}
+
+}
+
+
+.wrapper{
+  width: 100%;
+  overflow:  hidden;
+}
+nav ul{
+  font-weight: 600;
+  a{
+    font-size: 0.9em;
+    margin: 0 25px;
+  }
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  .row{
+    margin: 0;
+  }
+  @include media-breakpoint-down(sm){
+    background-image: url(../img/hero_1.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    .logo{
+      width: 100%;
+      h1{
+        font-size: 3em;
+      }
+    }
+
+    .row{
+      padding: 0.8em !important;
+    }
+  }
+  .title-sm{
+    font-size: 1.4em;
+    width: 100%;
+  }
+}
+
+.d-flex{
+  display: flex;
+}
+.justify-center{
+  display: flex;
+  justify-content: center;
+}
+.align-center{
+  display: flex;
+  align-items: center;
+}
+
+.list{
+  padding: 0;
+  li{
+
+    list-style-type: none;
+    @media screen and (min-width: 1100px) {
+      display: inline;
+    }
+    @include media-breakpoint-down(lg){
+      text-align: right;
+    }
+  }
+}
+
+.hero_title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  h1{
+    font-size: 2.8em;
+    font-weight: 600;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+  }
+  @include media-breakpoint-down(md){
+    h1{font-size: 2em;}
+  }
+  @include media-breakpoint-down(sm){
+    position: relative;
+    h1{font-size: 1.5em;}
+  }
+
+}
+
+main{
+  .hero_title{
+    color: $color-sec;
+  }
+
+  p, a{
+    letter-spacing: 0.5px;
+  }
+
+  .link:before{
+    content: '>';
+    letter-spacing: 10px;
+    transition: all 0.2s;
+  }
+  .link:hover{
+    &:before{
+      letter-spacing: 1px;
+    }
+  }
+  @include media-breakpoint-down(md){
+    .hero_title h1{font-size: 3em;}
+  }
+  @include media-breakpoint-down(sm){
+    .hero_title h1{font-size: 2em;}
+  }
+
+  .service{
+    font-size: 1.7em;
+    line-height: 1.5em;
+    color: $color-main;
+    span{
+      font-weight: 500;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 1.4em;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 1.2em;
+    }
+  }
+
+}
+
+
+.link{
+  color: $color-sec;
+  font-weight: 500;
+  text-decoration: underline;
+
+}
+.container{
+  max-width: 1500px;
+}
+.form{
+  box-shadow: 0px 0px 80px -16px rgba(0,0,0,0.4);
+  h2{
+    color: $color-main;
+    font-size: 2em;
+    padding-bottom: 0.7em;
+    @include media-breakpoint-down(sm){
+      font-size: 1.8em;
+    }
+    font-weight: 500;
+  }
+  #accordion{
+    p{
+      @include media-breakpoint-down(xsm){
+        font-size: 1em;
+      }
+    }
+    h2{
+      line-height: 0.8em;
+      span{
+        font-size: 1rem ;
+      }
+    }
+
+
+  }
+  .col-md-7{
+    padding: 5em;
+    h2{
+      border-bottom: 1px solid $color-main;
+      margin-bottom: 2.5em;
+      font-weight: 600;
+    }
+    transition: height 1s;
+
+  }
+  .col-md-5{
+    padding: 5em;
+    background-color: $color-sec;
+    color: $color-light;
+
+    h2{
+      display: inline-block;
+
+      color: $color-light;
+      border-bottom: 1px solid $color-light;
+      margin-bottom: 3em;
+    }
+    h3{
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    p{
+      font-weight: 500;
+      font-size: 1.3em;
+      line-height: 1.6em;
+      margin-bottom: 3em;
+    }
+
+    i{
+      font-size: 1.15em;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+    }
+  }
+
+}
+
+input, textarea{
+  resize: none;
+  border: 2px solid lighten($color-main,20);
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  font-family: 'Barlow', Arial, sans-serif;
+  color: $color-main;
+  padding: 0.8em;
+  &:focus{
+    border: 2px solid $color-sec;
+  }
+}
+
+.bg-main{
+  background-color: #323232;
+}
+.depositaires{
+
+  padding: 5em 0;
+  @include media-breakpoint-down(sm){
+    padding: 3em 0;
+  }
+  h2{
+    font-weight: 600;
+    color: $color-main;
+  }
+}
+
+.bg-fluid-dark{
+
+  padding: 4em 0 1em;
+  @include media-breakpoint-down(sm){
+    padding: 2em 0;
+  }
+  background-color: #232323;
+  color: $color-main;
+  h3{
+    color: $color-light;
+    span{
+      color: $color-sec;
+    }
+  }
+  h4{
+    color: $color-light;
+    font-size: 1.2em;
+  }
+  p, a.mail{
+    font-weight: 500;
+  }
+
+  .mt-extend{
+    margin-top: 8em;
+    @include media-breakpoint-down(sm){
+      margin-top: 1em;
+    }
+  }
+}
+
+.footer-header{
+  ul a{
+    @media screen and (max-width: 1100px) {
+      margin: 0;
+
+    }
+  }
+  ul li{
+    @media screen and (max-width: 1100px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+.copyright{
+  background-color: black;
+  color: $color-main;
+  font-weight: 400;
+  line-height: 1em;
+  span{
+    font-weight: 700;
+  }
+}
+
+
+
+// Scroll back to top button
+.back-to-top{
+	position: fixed;
+	right: 2%;
+	bottom: -8%;
+	font-size: 2em;
+	// line-height: 17px;
+	padding: 0 10px;
+	border-radius: 3px;
+	opacity: 0.5;
+	z-index: 3;
+	color: #fff;
+	transition: all 0.25s ease-in-out;
+	background-color: #8f8f8f;
+  i{
+    position: absolute;
+    top: 0;
+  }
+}
+.back-to-top:hover{
+	background-color: #797979;
+}
+
+.show-back-to-top{
+	bottom: 2%;
+}
